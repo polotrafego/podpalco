@@ -98,14 +98,14 @@ export function Hero() {
       <div className="absolute -top-40 right-[-10%] -z-10 h-[38rem] w-[38rem] rounded-full bg-indigo/30 blur-[140px]" />
       <div className="absolute bottom-[-20%] left-[-10%] -z-10 h-[30rem] w-[30rem] rounded-full bg-orange/20 blur-[140px]" />
 
-      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[1.25fr_1fr] lg:gap-6">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 md:px-8 lg:grid-cols-[0.95fr_1.2fr] lg:gap-10">
         <div>
           <p className="reveal in mb-7 inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold tracking-wide text-white/85 backdrop-blur">
             <span className="rec-dot h-2 w-2 rounded-full bg-coral" />
             {HERO.selo}
           </p>
 
-          <h1 className="display text-[clamp(2.1rem,9.4vw,6.6rem)] lg:text-[clamp(3rem,5.6vw,6.2rem)]">
+          <h1 className="display text-[clamp(1.9rem,8vw,3.4rem)] lg:text-[clamp(2.4rem,3.5vw,3.6rem)]">
             {HERO.linhas.map((l, i) => (
               <span key={l} className="block overflow-hidden pb-[0.06em]">
                 <span className={`hero-line block ${cores[i]}`} style={{ animationDelay: `${120 + i * 140}ms` }}>
@@ -132,7 +132,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[34rem] lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-[40rem] lg:-mr-6 lg:max-w-none xl:-mr-12">
           <div className="float">
             <HostBubbles className="w-full drop-shadow-[0_40px_80px_rgba(188,12,221,0.35)]" />
           </div>
