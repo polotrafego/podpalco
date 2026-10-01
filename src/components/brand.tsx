@@ -1,5 +1,3 @@
-import { useId } from 'react'
-
 /**
  * Vetores oficiais da marca, extraídos de SIV/ai/podpalco.ai (prancha do logo
  * horizontal) e conferidos com SIV/260824_siv_icone_icone.svg. Nada aqui é
@@ -57,53 +55,6 @@ export function Logo({ className = '', title = 'PodPalco' }: { className?: strin
       {WORD.map(([t, d]) => (
         <path key={t} fill="currentColor" transform={t} d={d} />
       ))}
-    </svg>
-  )
-}
-
-/**
- * O hero: o símbolo vira moldura dos hosts. Cada um, recortado e em P&B, fica
- * sobre a cor do próprio balão — Dennis no laranja, Fábio no magenta — e as
- * cabeças saem pelo topo. A lente pink continua por cima, tingindo o ponto
- * onde os dois se encontram: é a sobreposição do logo acontecendo nos rostos.
- *
- * Ordem: balões sólidos → Fábio → Dennis → lente pink translúcida.
- */
-export function HostBubbles({ className = '' }: { className?: string }) {
-  const id = useId().replace(/:/g, '')
-  const a = `a${id}`
-  const b = `b${id}`
-  const l = `l${id}`
-  return (
-    <svg viewBox="-12 -52 316 298" className={className} role="img" aria-label="Dennis Penna e Fábio Borges, hosts do PodPalco">
-      <defs>
-        {/* Balão laranja inteiro (forma + lente) e a área por onde a cabeça sai */}
-        <clipPath id={a}>
-          <path transform={ORANGE_T} d={ORANGE} />
-          <path transform={LENS_T} d={LENS} />
-          <rect x="-12" y="-60" width="196" height="92" rx="40" />
-        </clipPath>
-        {/* Balão magenta (sem a lente) e a área da cabeça */}
-        <clipPath id={b}>
-          <path transform={MAGENTA_T} d={MAGENTA} />
-          <rect x="168" y="-40" width="122.73" height="110" rx="40" />
-        </clipPath>
-        <clipPath id={l}>
-          <path transform={LENS_T} d={LENS} />
-        </clipPath>
-      </defs>
-
-      <SymbolPaths />
-
-      <g clipPath={`url(#${b})`}>
-        <image href="/assets/hero-fabio.webp" x="104" y="10" width="244" height="229" preserveAspectRatio="xMidYMin meet" />
-      </g>
-      <g clipPath={`url(#${a})`}>
-        <image href="/assets/hero-dennis.webp" x="-18" y="-36" width="230" height="276" preserveAspectRatio="xMidYMin meet" />
-      </g>
-      <g clipPath={`url(#${l})`}>
-        <rect x="80" y="60" width="130" height="120" fill="#fa2077" opacity="0.74" />
-      </g>
     </svg>
   )
 }

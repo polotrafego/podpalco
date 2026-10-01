@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { HERO, LINKS, MARQUEE, NAV } from '../content'
-import { HostBubbles, Logo, Symbol } from '../components/brand'
+import { Logo, Symbol } from '../components/brand'
 import { Equalizer, IconArrow, IconInstagram, IconPlay, IconSpotify, IconYouTube } from '../components/ui'
 
 export function Header() {
@@ -133,16 +133,24 @@ export function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-[40rem] lg:-mr-6 lg:max-w-none xl:-mr-12">
+          {/* Arte final do hero (261001_imagem-hero.psd): os hosts recortados sobre o símbolo. */}
           <div className="float">
-            <HostBubbles className="w-full drop-shadow-[0_40px_80px_rgba(188,12,221,0.35)]" />
+            <img
+              src="/assets/hero-podpalco.webp"
+              width={1200}
+              height={1200}
+              alt="Dennis Penna e Fábio Borges, hosts do PodPalco, sobre o símbolo da marca"
+              fetchPriority="high"
+              className="h-auto w-full drop-shadow-[0_40px_80px_rgba(188,12,221,0.35)]"
+            />
           </div>
-          <span className="absolute left-[0%] top-[46%] rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold tracking-wide backdrop-blur md:text-sm">
+          <span className="absolute left-[8%] top-[80%] rounded-full bg-white px-3.5 py-1.5 text-xs font-bold tracking-wide text-ink md:text-sm">
             Dennis Penna
           </span>
-          <span className="absolute bottom-[4%] right-[2%] rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold tracking-wide backdrop-blur md:text-sm">
+          <span className="absolute bottom-[9%] right-[8%] rounded-full bg-white px-3.5 py-1.5 text-xs font-bold tracking-wide text-ink md:text-sm">
             Fábio Borges
           </span>
-          <span className="absolute bottom-[14%] left-[6%] inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-bold text-ink md:text-sm">
+          <span className="absolute right-[10%] top-[20%] inline-flex items-center gap-2 rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold backdrop-blur md:text-sm">
             <Equalizer className="text-pink" /> No ar
           </span>
         </div>
