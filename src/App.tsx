@@ -23,7 +23,7 @@ export default function App() {
         <Convidados />
         <Casa />
         <Numeros />
-        <Patrocinio onCota={setInteresse} />
+        <Patrocinio />
         <Fechamento />
         <Contato interesse={interesse} setInteresse={setInteresse} />
       </main>

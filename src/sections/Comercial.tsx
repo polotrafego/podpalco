@@ -58,7 +58,7 @@ export function Numeros() {
 }
 
 /* ===== Patrocínio ===== */
-export function Patrocinio({ onCota }: { onCota: (nome: string) => void }) {
+export function Patrocinio() {
   const ref = useReveal<HTMLElement>()
   const cores = ['text-orange', 'text-coral', 'text-pink', 'text-magenta']
   return (
@@ -115,40 +115,6 @@ export function Patrocinio({ onCota }: { onCota: (nome: string) => void }) {
           ))}
         </div>
 
-        {/* Cotas */}
-        <Reveal className="mt-20 flex flex-col justify-between gap-4 md:flex-row md:items-end">
-          <h3 className="display text-[clamp(1.6rem,3vw,2.4rem)]">Formas de participação</h3>
-          <p className="max-w-md text-mute">{PATROCINIO.nota}</p>
-        </Reveal>
-        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {PATROCINIO.cotas.map((c, i) => (
-            <Reveal key={c.nome} delay={i * 90}>
-              <div
-                className={`group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] p-7 transition duration-500 hover:-translate-y-1.5 ${
-                  c.destaque ? 'bg-gradient-to-br from-orange via-pink to-magenta' : 'border border-white/10 bg-ink hover:border-pink/50'
-                }`}
-              >
-                {c.destaque && <div className="halftone-pink absolute inset-0 opacity-40" />}
-                <div className="relative flex items-center justify-between">
-                  <span className="display text-5xl opacity-90">{i + 1}</span>
-                  {c.destaque && <span className="rounded-full bg-ink px-3 py-1 text-[0.7rem] font-bold uppercase tracking-wider">Principal</span>}
-                </div>
-                <h4 className="display relative mt-8 text-xl leading-tight">{c.nome}</h4>
-                <p className={`relative mt-3 flex-1 ${c.destaque ? 'text-white/90' : 'text-white/70'}`}>{c.texto}</p>
-                <p className={`relative mt-6 text-sm font-bold uppercase tracking-wider ${c.destaque ? 'text-white' : 'text-pink'}`}>{c.qtd}</p>
-                <a
-                  href="#contato"
-                  onClick={() => onCota(c.nome)}
-                  className={`relative mt-6 inline-flex items-center justify-between rounded-full px-5 py-3 text-sm font-bold transition ${
-                    c.destaque ? 'bg-ink text-white hover:bg-ink-3' : 'border border-white/20 hover:border-white hover:bg-white/5'
-                  }`}
-                >
-                  Quero esta cota <IconArrow />
-                </a>
-              </div>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   )

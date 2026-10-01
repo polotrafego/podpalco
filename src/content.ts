@@ -301,13 +301,6 @@ export const PATROCINIO = {
     { grupo: 'Social', itens: ['Cortes para redes', 'Posts colaborativos', 'Bastidores'] },
     { grupo: 'Relação', itens: ['Ativações especiais', 'Conteúdos customizados', 'Convidados e comunidade'] },
   ],
-  cotas: [
-    { nome: 'Patrocínio da temporada', texto: 'Presença recorrente ao longo de todos os episódios.', qtd: '1 a 2 cotas', destaque: true },
-    { nome: 'Episódio especial', texto: 'Conteúdo construído em parceria com a marca.', qtd: 'até 12 cotas' },
-    { nome: 'Apoio', texto: 'Inserções estratégicas dentro da experiência visual e da comunicação.', qtd: 'até 4 cotas' },
-    { nome: 'Patrocínio de quadro', texto: 'Associação da marca a uma editoria ou momento específico.', qtd: '2 cotas' },
-  ],
-  nota: 'Cada nível pode ser combinado. O desenho final é montado junto com a marca.',
 }
 
 export const INTERESSES = [
