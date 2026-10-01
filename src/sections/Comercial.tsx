@@ -19,7 +19,7 @@ function Stat({ item, i }: { item: (typeof NUMEROS.itens)[number]; i: number }) 
         <p className={`eyebrow relative ${big ? 'text-white/90' : 'text-pink'}`}>{item.fonte}</p>
         <div className="relative">
           <p className={`display tabular-nums ${big ? 'whitespace-nowrap text-[clamp(4rem,9vw,8rem)]' : 'whitespace-nowrap text-[clamp(2.6rem,4vw,3.6rem)]'}`}>
-            {item.prefixo}
+            {item.prefixo === '+' ? item.prefixo : <span className="mb-[0.35em] block text-[0.3em] tracking-[0.08em]">{item.prefixo}</span>}
             <span ref={ref}>{v}</span>
             <span className="ml-[0.12em] text-[0.48em]">{item.sufixo.trim()}</span>
           </p>

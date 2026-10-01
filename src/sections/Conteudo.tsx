@@ -82,6 +82,7 @@ export function Hosts() {
                   <div className="grid gap-6 p-6 md:grid-cols-[1fr_auto] md:items-end md:p-8">
                     <p className="text-white/75">{h.bio}</p>
                     <div className="md:text-right">
+                      {h.antes && <p className={`eyebrow ${orange ? 'text-orange' : 'text-pink'}`}>{h.antes}</p>}
                       <p className={`display text-4xl ${orange ? 'text-orange' : 'text-pink'}`}>{h.numero}</p>
                       <p className="mt-1 text-sm text-mute">{h.legenda}</p>
                     </div>

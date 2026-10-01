@@ -74,8 +74,10 @@ export const HOSTS = {
     {
       nome: 'Dennis Penna',
       papel: 'Fundador da Polo Palestrantes',
-      bio: 'Há mais de 15 anos acompanha de perto o mercado de palestras, seus bastidores, negociações e carreiras.',
-      numero: '+15 anos',
+      bio: 'Acompanha de perto o mercado de palestras: os bastidores, as negociações e as carreiras de quem vive de palco.',
+      /** Texto pequeno acima do número, quando o número precisa de qualificador. */
+      antes: 'Quase',
+      numero: '20 anos',
       legenda: 'vivendo o mercado de palestras',
       foto: '/assets/dennis-riso.webp',
       cor: 'orange',
@@ -84,6 +86,7 @@ export const HOSTS = {
       nome: 'Fábio Borges',
       papel: 'Palestrante e criador de conteúdo',
       bio: 'Ativador de emoções, conhecido por usar o humor como ferramenta para falar de comportamento, felicidade e inteligência emocional.',
+      antes: '',
       numero: '+600 mil',
       legenda: 'seguidores nas redes',
       foto: '/assets/fabio.webp',
@@ -280,7 +283,7 @@ export const NUMEROS = {
     { valor: 35, prefixo: '+', sufixo: '', rotulo: 'episódios publicados', fonte: 'Conteúdo' },
     { valor: 600, prefixo: '+', sufixo: ' mil', rotulo: 'seguidores nas redes', fonte: 'Fábio Borges' },
     { valor: 17, prefixo: '+', sufixo: ' mil', rotulo: 'eventos realizados', fonte: 'Ecossistema Polo' },
-    { valor: 15, prefixo: '+', sufixo: ' anos', rotulo: 'vivendo o mercado de palestras', fonte: 'Dennis Penna' },
+    { valor: 20, prefixo: 'quase', sufixo: ' anos', rotulo: 'vivendo o mercado de palestras', fonte: 'Dennis Penna' },
   ],
   convidados: 'Cada convidado chega com alcance próprio: admiradores e seguidores que acompanham o episódio.',
 }
