@@ -136,7 +136,7 @@ export function Hero() {
           <div className="float">
             <HostBubbles className="w-full drop-shadow-[0_40px_80px_rgba(188,12,221,0.35)]" />
           </div>
-          <span className="absolute left-[2%] top-[4%] rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold tracking-wide backdrop-blur md:text-sm">
+          <span className="absolute left-[0%] top-[46%] rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold tracking-wide backdrop-blur md:text-sm">
             Dennis Penna
           </span>
           <span className="absolute bottom-[4%] right-[2%] rounded-full bg-ink/80 px-3.5 py-1.5 text-xs font-bold tracking-wide backdrop-blur md:text-sm">
