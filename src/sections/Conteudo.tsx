@@ -126,7 +126,7 @@ function Thumb({ id, alt, className }: { id: string; alt: string; className: str
 const watch = (id: string) => `https://www.youtube.com/watch?v=${id}`
 
 function EpisodeCard({ ep, i }: { ep: Episodio; i: number }) {
-  const badge = i === 0 ? 'Novo' : ep.numero === '001' ? 'Onde tudo começou' : null
+  const badge = i === 0 ? 'Mais recente' : ep.numero === '001' ? 'Onde tudo começou' : null
   return (
     <a
       href={watch(ep.youtube)}
@@ -163,9 +163,9 @@ export function Episodios() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <Reveal className="max-w-2xl">
-            <Eyebrow>No ar</Eyebrow>
-            <h2 className="display mt-6 text-[clamp(2rem,4.2vw,3.5rem)]">Últimos episódios</h2>
-            <p className="mt-5 text-lg text-mute">Mais de 35 conversas com quem vive o mercado. Episódios completos, toda semana, no YouTube.</p>
+            <Eyebrow>Já no ar</Eyebrow>
+            <h2 className="display mt-6 text-[clamp(2rem,4.2vw,3.5rem)]">Episódios das temporadas anteriores</h2>
+            <p className="mt-5 text-lg text-mute">Mais de 35 conversas gravadas antes da 3ª temporada, com quem vive o mercado. Todos os episódios completos estão no YouTube.</p>
           </Reveal>
           <Reveal className="flex items-center gap-3">
             <button onClick={() => scroll(-1)} aria-label="Episódios anteriores" className="grid h-12 w-12 place-items-center rounded-full border border-white/20 transition hover:border-white hover:bg-white/5">
